@@ -134,8 +134,8 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: replace with your teaser -->
-      <img src="./static/images/muslr.png" alt="MuSLR teaser" style="width:100%; border-radius:8px;">
-      <h2 class="subtitle has-text-centered">MuSLR overview — benchmark & framework for multimodal symbolic logical reasoning.</h2>
+      <img src="./static/assets/teaser.png" alt="MuSLR teaser" style="width:100%; border-radius:8px;">
+      <h2 class="subtitle has-text-centered">UniM overview - the first Unified Any-to-Any Interleaved Multimodal benchmark.</h2>
     </div>
   </div>
 </section>
@@ -148,14 +148,16 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            Multimodal symbolic logical reasoning, which aims to deduce new facts from multimodal input via formal logic,
-            is critical in high-stakes applications such as autonomous driving and medical diagnosis, as its rigorous,
-            deterministic reasoning helps prevent serious consequences. To evaluate such capabilities of current
-            state-of-the-art vision language models (VLMs), we introduce the first benchmark <b>MuSLR</b> for
-            multimodal symbolic logical reasoning grounded in formal logical rules. MuSLR comprises <b>1,093</b> instances
-            across <b>7</b> domains, including <b>35</b> atomic symbolic logic and <b>976</b> logical combinations, with reasoning depths
-            ranging from <b>2</b> to <b>9</b>. We evaluate 7 state-of-the-art VLMs on MuSLR and find that they all struggle
-            with multimodal symbolic reasoning, with the best model, GPT-4.1, achieving only <b>46.8%</b>.
+            In real-world multimodal applications, systems usually need to comprehend arbitrarily combined and interleaved multimodal inputs from users,
+            while also generating outputs in any interleaved multimedia form. This capability defines the goal of any-to-any interleaved multimodal learning
+            under a unified paradigm of understanding and generation, posing new challenges and opportunities for advancing Multimodal Large Language 
+            Models (MLLMs). To foster and benchmark this capability, this paper introduces the <b>UniM</b> benchmark, the first Unified Any-to-Any 
+            Interleaved Multimodal dataset. UniM contains 31K high-quality instances across 30 domains and 7 representative modalities: text, image,
+            audio, video, document, code, and 3D, each requiring multiple intertwined reasoning and generation capabilities. We further introduce 
+            the <b>UniM Evaluation Suite</b>, which assesses models along three dimensions: Semantic Correctness & Generation Quality, Response Structure Integrity, 
+            and Interleaved Coherence. In addition, we propose <b>UniMA</b>, an agentic baseline model equipped with traceable reasoning for
+            structured interleaved generation. Comprehensive experiments demonstrate the difficulty of UniM and highlight key challenges and directions 
+            for advancing unified any-to-any multimodal intelligence.
           </p>
         </div>
       </div>
