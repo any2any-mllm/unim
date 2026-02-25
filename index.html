@@ -134,7 +134,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: replace with your teaser -->
-      <img src="./static/assets/teaser.png" alt="MuSLR teaser" style="width:100%; border-radius:8px;">
+      <img src="./static/assets/teaser.png" alt="UniM teaser" style="width:100%; border-radius:8px;">
       <h2 class="subtitle has-text-centered">UniM overview - the first Unified Any-to-Any Interleaved Multimodal benchmark.</h2>
     </div>
   </div>
@@ -165,39 +165,23 @@
   </div>
 </section>
 
-<!-- ===== Task Definition (exact wording, plain text) -->
+<!-- ===== Comparision -->
 <section class="section" id="task">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Task Definition</h2>
-        <div class="content has-text-justified">
-          <p>
-            The proposed tasks require models to integrate information from both an image I and a text passage
-            T to perform reasoning, ensuring that neither modality alone is sufficient for correct inference. The
-            tasks explicitly emphasize multimodal reasoning, where the fusion of visual and textual context is
-            essential for deriving accurate and consistent conclusions.
-          </p>
-          <p>
-            <b>Task-I: Truth Evaluation (True/False/Unknown) Question.</b> Given an image I, a text passage
-            T , and an argument A, the model must determine the truth value of the argument based on the
-            combined information from I and T . Specifically, the model outputs the truth value Truth(A) ∈
-            {True, False, Unknown} and generates a sequence of reasoning steps R = {R1, R2, . . . , Rn}, where
-            each Ri represents an individual step that contributes to the final decision. Formally, the input is a
-            triplet (I, T, A), and the output consists of Truth(A) and R.
-          </p>
-          <p>
-            <b>Task-II: Multiple Choice Question.</b> Given an image I, a text passage T , and candidate arguments
-            {A1, A2, A3, A4}, the model must select the argument that best matches the image and text, denoted
-            as BestArgument(I, T ) ∈ {A1, A2, A3, A4}. Additionally, the model must provide detailed reason-
-            ing steps R = {R1, R2, . . . , Rn}, where each Ri details a step in the reasoning process. Formally,
-            the input is a triplet (I, T, {A1, A2, A3, A4}), and the output consists of BestArgument(I, T ) and R.
-          </p>
-        </div>
+        <h2 class="title is-3">
+          Comparison with existing interleaved benchmarks. 
+          Inter. Comb.: Interleaved combinations of modalities.
+          Cap. per Instance: Capability per instance. Difficulty Tax.: Difficulty taxonomy.
+        </h2>
+        <img src="./static/assets/Comparison.png" alt="UniM Comparison" style="width:100%; border-radius:8px;">
       </div>
     </div>
   </div>
 </section>
+
+  
 
 <!-- ===== Dataset Statistics -->
 <section class="section" id="stats">
@@ -207,7 +191,13 @@
         <h2 class="title is-3 has-text-centered">Dataset Statistics</h2>
         <div class="content has-text-centered">
           <!-- TODO: replace with your stats figure -->
-          <img src="./static/images/stats.png" alt="Dataset statistics" style="width:100%; max-width:1000px; border-radius:8px;">
+          <img src="./static/assets/stats1.png" alt="Dataset statistics1" style="width:100%; max-width:1000px; border-radius:8px;">
+        </div>
+        <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 20px;">
+          <!-- stats2 图片 -->
+          <img src="./static/assets/stats2.png" alt="Dataset statistics2" style="width:100%; max-width:1000px; border-radius:8px;">
+          <!-- stats3 图片 -->
+          <img src="./static/assets/stats3.png" alt="Dataset statistics3" style="width:100%; max-width:1000px; border-radius:8px;">
         </div>
       </div>
     </div>
@@ -215,6 +205,7 @@
 </section>
 
 
+  
 <!-- ===== Data Construction -->
 <section class="section" id="construction">
   <div class="container is-max-desktop">
@@ -259,6 +250,8 @@
   </div>
 </section>
 
+
+  
 
 <!-- ===== LogiCAM (image only) -->
 <section class="section" id="logicam">
