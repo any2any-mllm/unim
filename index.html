@@ -216,29 +216,25 @@
 
         <div class="content has-text-justified">
           <p>
-            We collect images from various sources such as COCO, Flickr30k, nocaps, MIMIC, RVL_CDIP, ScienceQA,
-            and manually collected Traffic Reports. Visual details for each image are extracted using GPT-4o, ensuring
-            diverse and fine-grained descriptions. We carefully select non-trivial logical inference rules, such as
-            Modus Ponens and Hypothetical Syllogism, drawn from propositional logic (PL), first-order logic (FOL),
-            and non-monotonic logic (NM). These rules then form meaningful but abstract reasoning chains through
-            logical combinations. The abstract chains are grounded in real-world contexts by leveraging extracted
-            visual features and relevant retrieved text from sources like healthcare, traffic reports, and Wikipedia.
-            Questions and answers are then generated based on these instantiated reasoning chains, using rule-based
-            substitution.
+            <b>Construction pipeline.</b> We first collect a wide range of multimodal data mainly from three sources: curated samples from public datasets, 
+            real-world multimedia content from social media (vlogs, posts), and open resources (forums, websites).
+            Then, we manually design interleaved combinations tailored to different modalities, providing templates for the later construction.
+            During the construction of QA pairs, we design task types and template instances to ensure task diversity and semantic validity.
+            Based on these, GPT-5-mini is employed to generate additional candidate instances for data expansion, so as to simulate more 
+            any-to-any multimodal scenarios that are hard to directly retrieve from the Internet.
           </p>
           <p>
-            To ensure the quality and relevance of the dataset, both automatic and manual quality control procedures
-            are employed. Automatic checks include assessing lexical similarity and commonsense plausibility, while
-            human annotators verify the accuracy of visual details and the real-world relevance of the generated context.
-            Instances that fail these checks are filtered out, ensuring a high-quality, logically sound, and contextually
-            relevant dataset.
+            <b>Quality Control.</b> We adopt a two-phase quality control process. All QA pairs are manually reviewed and revised as needed to ensure 
+            that the modality placeholder tags comply with task specifications and that the content remains logically consistent.
+            Then, an independent checking process is conducted, where reviewers carefully examine each completed sample to 
+            further ensure the reliability and high quality of our dataset.
           </p>
         </div>
 
         <!-- NEW: Data Construction Image -->
         <div class="content has-text-centered" style="margin-top: 1.25rem;">
           <!-- TODO: replace with your actual figure filename if different -->
-          <img src="./static/images/data_construction.png"
+          <img src="./static/assets/data_construction.png"
                alt="Data construction pipeline"
                style="width:100%; max-width:1000px; border-radius:8px;">
           <p class="has-text-grey is-size-6" style="margin-top: 0.5rem;">
