@@ -254,10 +254,39 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">LogiCAM</h2>
+        <h2 class="title is-3 has-text-centered">UniM Evaluation Suite</h2>
         <div class="content has-text-centered">
-          <!-- TODO: replace with your LogiCAM figure -->
-          <img src="./static/images/logicam (1).png" alt="LogiCAM overview" style="width:100%; max-width:1000px; border-radius:8px;">
+          <div class="content has-text-justified">
+          <p>
+            <b>Semantic Correctness & Generation Quality. </b>
+            Semantic Correctness (SC) measures how well the generated output semantically aligns with the reference answer.
+            To ensure fair evaluation across modalities with varying instruction-following capabilities, 
+            we convert all modality outputs into comparable caption-like textual representations and employ the LLM-as-a-Judge strategy for measurement. 
+            Generation Quality (GQ) evaluates the perceptual quality and structural coherence of generated content.
+            Accordingly, we design modality-specific no-reference quality assessment methods to ensure unified and comparable quality metrics 
+            across multimodal scenarios. Then, we compose both SC and GQ into Semantic–Quality Coupled Score (SQCS) to reflect the overall performance.
+          </p>
+          <p>
+            <b>Response Structure Integrity. </b>
+            We devise Response Structure Integrity to evaluate whether a model adheres to task-defined structural requirements regarding 
+            modality types and item quantities, regardless of semantic or logical correctness. Technically, we break it down into two branches: 
+            Strict Structure Score (StS) evaluates the strict structural consistency of a model's output.
+            StS requires that the types and quantities of modalities generated in model's response precisely correspond to those in the ground truth.
+            Any missing or redundant modalities, or discrepancies in the number of modality placeholder tags, are explicitly penalized. 
+            Lenient Structure Score (LeS) evaluates the degree of coverage at the modality level.
+            LeS assesses whether the types of modalities generated in model's response are consistent with those in the ground truth.
+          </p>
+          <p>
+            <b>Interleaved Coherence. </b>
+            Interleaved Coherence is designed to evaluate a model’s ability to maintain logical connectivity and 
+            expressive coordination during multimodal integration, measured by Holistic Coherence (HC), which focuses 
+            on cross-modal semantic and structural consistency, and Stylistic Harmony (SH), which evaluates consistency
+            in writing style, tone, and visual aesthetics. We adopt the LLM-as-a-Judge to quantify HC and SH, and ultimately
+            use a composite metric over them: Interleaved Coherence Score (ICS).
+          </p>
+
+        </div>
+          <img src="./static/assets/eval.png" alt="UniM eval suite overview" style="width:100%; max-width:1000px; border-radius:8px;">
         </div>
       </div>
     </div>
